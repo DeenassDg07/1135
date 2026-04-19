@@ -1,0 +1,34 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <RootNamespace>_1125</RootNamespace>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UseWPF>true</UseWPF>
+    <NuGetAudit>True</NuGetAudit>
+    <ApplicationIcon>Безымянный.ico</ApplicationIcon>
+   </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="5247164926118720603.jpg" />
+    <None Remove="View\Снимок экрана 2025-05-10 195229.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="Безымянный.ico" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Xaml.Behaviors.Wpf" Version="1.1.135" />
+    <PackageReference Include="MvvmLightLibs" Version="5.4.1.1" />
+    <PackageReference Include="MySqlConnector" Version="2.4.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Image\5247164926118720603.jpg" />
+    <Resource Include="Image\Снимок экрана 2025-05-10 195229.png" />
+  </ItemGroup>
+
+</Project>

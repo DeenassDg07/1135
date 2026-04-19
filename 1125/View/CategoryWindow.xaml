@@ -1,0 +1,47 @@
+﻿<Window x:Class="_1125.View.CategoryWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:_1125.View"
+        mc:Ignorable="d"
+        Title="CategoryWindow" Height="420" Width="250">
+    <Border BorderBrush="#2027BC" BorderThickness="15">
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+           
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+
+           
+            <Button Command="{Binding ProductsVacuumСleaner}" Grid.Row="0" Height="30" Width="200" FontSize="20" Foreground="#2027BC" Background="White" BorderThickness="0">
+                <TextBlock><Underline>Пылесос</Underline></TextBlock>
+            </Button>
+            <Button Command="{Binding ProductsMicrowave}" Grid.Row="1" Height="30" Width="200" FontSize="20" Foreground="#2027BC" Background="White" BorderThickness="0">
+                <TextBlock><Underline>Микроволновка</Underline></TextBlock>
+            </Button>
+            <Button Command="{Binding ProductsFridge}" Grid.Row="2" Height="30" Width="200" FontSize="20" Foreground="#2027BC" Background="White" BorderThickness="0">
+                <TextBlock><Underline>Холодильник</Underline></TextBlock>
+            </Button>
+            <Button Command="{Binding ProductsTV}" Grid.Row="3" Height="30" Width="200" FontSize="20" Foreground="#2027BC" Background="White" BorderThickness="0">
+                <TextBlock><Underline>Телевизор</Underline></TextBlock>
+            </Button>
+            <Button Command="{Binding ProductsTelephone}" Grid.Row="4" Height="30" Width="200" FontSize="20" Foreground="#2027BC" Background="White" BorderThickness="0">
+                <TextBlock><Underline>Телефон</Underline></TextBlock>
+            </Button>
+
+           
+            <Button Command="{Binding ProductsAll}" Grid.Row="5" Height="30" Width="200" FontSize="20" Foreground="White" Background="#2027BC" BorderThickness="0">
+                <TextBlock><Underline>Все товары</Underline></TextBlock>
+            </Button>
+        </Grid>
+    </Border>
+</Window>

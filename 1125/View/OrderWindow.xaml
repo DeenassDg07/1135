@@ -1,0 +1,72 @@
+﻿<Window x:Class="_1125.View.OrderWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="OrderWindow" Height="120" Width="300">
+    <Border BorderBrush="#2027BC" BorderThickness="10">
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="140"/>
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition />
+                <RowDefinition />
+            </Grid.RowDefinitions>
+
+            <TextBlock Grid.Row="0" Grid.Column="0" Text="Ваш заказ приедет:" 
+                       Foreground="#2027BC" FontSize="15" VerticalAlignment="Center" HorizontalAlignment="Right" Width="138"/>
+            <TextBlock Grid.Row="0" Grid.Column="1" Height="25" Width="100" VerticalAlignment="Center" HorizontalAlignment="Center"
+                       Text="{Binding DeliveryDate, StringFormat={}{0:dd MMMM yyyy}}" />
+
+            <Button Command="{Binding Cancel}" 
+        BorderThickness="0" 
+        Content="Отмена" 
+        Grid.Row="1" Grid.Column="0" 
+        Width="100" Height="25" 
+        VerticalAlignment="Center" 
+        HorizontalAlignment="Center" 
+        Background="#FF2027BC" 
+        Foreground="White"
+        FontSize="14">
+                <Button.Template>
+                    <ControlTemplate TargetType="Button">
+                        <Border 
+                Background="{TemplateBinding Background}"
+                BorderBrush="{TemplateBinding BorderBrush}"
+                BorderThickness="{TemplateBinding BorderThickness}"
+                CornerRadius="12">
+                            <ContentPresenter 
+                    HorizontalAlignment="Center" 
+                    VerticalAlignment="Center"/>
+                        </Border>
+                    </ControlTemplate>
+                </Button.Template>
+            </Button>
+
+            <Button Command="{Binding Ok}" 
+        BorderThickness="0" 
+        Content="ОК" 
+        Grid.Row="1" Grid.Column="1" 
+        Width="100" Height="25" 
+        VerticalAlignment="Center" 
+        HorizontalAlignment="Center" 
+        Background="#FF2027BC" 
+        Foreground="White"
+        FontSize="14">
+                <Button.Template>
+                    <ControlTemplate TargetType="Button">
+                        <Border 
+                Background="{TemplateBinding Background}"
+                BorderBrush="{TemplateBinding BorderBrush}"
+                BorderThickness="{TemplateBinding BorderThickness}"
+                CornerRadius="12">
+                            <ContentPresenter 
+                    HorizontalAlignment="Center" 
+                    VerticalAlignment="Center"/>
+                        </Border>
+                    </ControlTemplate>
+                </Button.Template>
+            </Button>
+        </Grid>
+    </Border>
+</Window>
