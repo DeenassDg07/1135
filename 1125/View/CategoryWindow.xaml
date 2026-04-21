@@ -14,22 +14,22 @@
             <RowDefinition Height="*"/>
             <RowDefinition Height="40"/>
         </Grid.RowDefinitions>
-            
-        <TextBlock Height="25" Width="200"  Background="White" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,10,0,0" />
+
+        <TextBox   Height="25" Width="200"  Background="White" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,10,0,0" />
 
         <ScrollViewer Grid.Row="1" VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Disabled">
             <ListBox Background="#F5F5F5">
                 <ListBox.ItemTemplate>
                     <DataTemplate>
                         <Grid>
-                            <Button  Height="25" Width="200"  Background="#F5F5F5" BorderBrush="Transparent"/>
+                            <Button  Height="25" Width="200" FontFamily="Times New Roman"  Background="#F5F5F5" BorderBrush="Transparent"/>
                         </Grid>
                     </DataTemplate>
                 </ListBox.ItemTemplate>
             </ListBox>
         </ScrollViewer>
 
-        <Button Command="{Binding ProductsAll}" Grid.Row="2" Height="35" Width="200" FontSize="20" Foreground="#000000" Background="#FF6100" BorderThickness="0">
+        <Button Command="{Binding ProductsAll}" Grid.Row="2" Height="35" Width="200" FontSize="20" Foreground="#000000" Background="#FF6100" BorderThickness="0" FontFamily="Times New Roman">
             <TextBlock>Все товары</TextBlock>
             <Button.Template>
                 <ControlTemplate TargetType="Button">

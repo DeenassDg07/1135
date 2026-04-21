@@ -1,31 +1,32 @@
 ﻿<Window x:Class="_1125.View.OrderWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Title="OrderWindow" Height="120" Width="300">
-    <Border BorderBrush="#2027BC" BorderThickness="10">
+         Background="#F5F5F5"
+        Title="OrderWindow" Height="170" Width="300">
+    
         <Grid>
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="140"/>
-                <ColumnDefinition />
-            </Grid.ColumnDefinitions>
-            <Grid.RowDefinitions>
-                <RowDefinition />
-                <RowDefinition />
-            </Grid.RowDefinitions>
 
-            <TextBlock Grid.Row="0" Grid.Column="0" Text="Ваш заказ приедет:" 
-                       Foreground="#2027BC" FontSize="15" VerticalAlignment="Center" HorizontalAlignment="Right" Width="138"/>
-            <TextBlock Grid.Row="0" Grid.Column="1" Height="25" Width="100" VerticalAlignment="Center" HorizontalAlignment="Center"
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" >
+            <TextBlock Text="Ваш заказ приедет:" FontFamily="Times New Roman"  Margin="0,15,10,0"
+                       Foreground="#242527" FontSize="15" VerticalAlignment="Stretch" HorizontalAlignment="Right" Width="138"/>
+            <TextBlock  Height="25" Width="100" VerticalAlignment="Top" HorizontalAlignment="Center" Margin="0,15,10,0"
                        Text="{Binding DeliveryDate, StringFormat={}{0:dd MMMM yyyy}}" />
+        </StackPanel>
+        <StackPanel  VerticalAlignment="Center" HorizontalAlignment="Center"   >
+        <TextBlock FontFamily="Times New Roman" Text="Скоро с вами свяжется наш " TextAlignment="Center" FontSize="15" />
+            <TextBlock FontFamily="Times New Roman" Text="помошни и потребует код для " FontSize="15" TextAlignment="Center" />
+            <TextBlock FontFamily="Times New Roman" Text="оплаты товара " FontSize="15" TextAlignment="Center" />
+        </StackPanel>
 
-            <Button Command="{Binding Cancel}" 
+        <StackPanel Orientation="Horizontal"  HorizontalAlignment="Center" VerticalAlignment="Bottom"  >
+            <Button FontFamily="Times New Roman" Command="{Binding Cancel}"  Margin="0,0,15,10"
         BorderThickness="0" 
         Content="Отмена" 
         Grid.Row="1" Grid.Column="0" 
         Width="100" Height="25" 
         VerticalAlignment="Center" 
         HorizontalAlignment="Center" 
-        Background="#FF2027BC" 
+        Background="#6EA7B5" 
         Foreground="White"
         FontSize="14">
                 <Button.Template>
@@ -43,14 +44,14 @@
                 </Button.Template>
             </Button>
 
-            <Button Command="{Binding Ok}" 
+            <Button FontFamily="Times New Roman" Command="{Binding Ok}" Margin="0,0,15,10"
         BorderThickness="0" 
         Content="ОК" 
         Grid.Row="1" Grid.Column="1" 
         Width="100" Height="25" 
         VerticalAlignment="Center" 
         HorizontalAlignment="Center" 
-        Background="#FF2027BC" 
+        Background="#FF6100" 
         Foreground="White"
         FontSize="14">
                 <Button.Template>
@@ -67,6 +68,7 @@
                     </ControlTemplate>
                 </Button.Template>
             </Button>
-        </Grid>
-    </Border>
+        </StackPanel>
+    </Grid>
+  
 </Window>

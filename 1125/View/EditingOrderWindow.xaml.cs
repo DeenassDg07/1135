@@ -29,5 +29,7 @@ namespace _1125.View
                 vm.RequestClose += () => this.Close();
 
         }
+
+     
     }
 }

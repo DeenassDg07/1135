@@ -5,31 +5,34 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:_1125.View"
         mc:Ignorable="d"
-        Title="EntranceWindow" Height="350" Width="300">
-    <Border BorderBrush="#2027BC" BorderThickness="15">
-        <Grid>
+        Background="#F5F5F5" 
+        Title="EntranceWindow" Height="320" Width="300">
+  
+    <Grid>
             <Grid.RowDefinitions>
                 <RowDefinition/>
                 <RowDefinition/>
-                <RowDefinition />
-                <RowDefinition/>
+                <RowDefinition Height="40"/>
+            <RowDefinition/>
+            <RowDefinition/>
             </Grid.RowDefinitions>
             <Grid.ColumnDefinitions>
                 <ColumnDefinition/>
             </Grid.ColumnDefinitions>
-            <StackPanel VerticalAlignment="Bottom" HorizontalAlignment="Center">
-                <TextBlock Text="Логин:" Foreground="#FF555555" FontSize="20" />
-                <Border BorderBrush="#2027BC" BorderThickness="4">
-                <TextBox Text="{Binding Login}"  Height="40" Grid.Column="0" Grid.Row ="0" Width="200"/>
-                    </Border>
+        <StackPanel VerticalAlignment="Bottom" HorizontalAlignment="Center">
+            <TextBox  Text="{ Binding Login , StringFormat='Логин: {0}'}"  Height="40" Grid.Column="0" Grid.Row ="0" Width="200"/>
+                    
             </StackPanel>
-            <StackPanel VerticalAlignment="Bottom" HorizontalAlignment="Center" Grid.Column="1" Grid.Row ="1">
-                <TextBlock Text="Пароль:" Foreground="#FF555555" FontSize="20" />
-                <Border BorderBrush="#2027BC" BorderThickness="4">
-                <TextBox Text="{Binding Password}"  Height="40"  Width="200"/>
-                    </Border>
-            </StackPanel>
-            <Button Command="{Binding Logingo}" BorderThickness="0" VerticalAlignment="Bottom" Content="Войти" Foreground="White" Background="#FF2027BC" FontSize="20" Grid.Column="1" Grid.Row ="2"  Width="170" Height="40">
+        <StackPanel VerticalAlignment="Bottom" HorizontalAlignment="Center" Grid.Column="1" Grid.Row ="1">
+            <TextBox Text="{Binding Password, StringFormat='Пароль: {0}' }"  Height="40"  Width="200"/>
+        </StackPanel>
+
+        <StackPanel VerticalAlignment="Bottom" HorizontalAlignment="Center" Orientation="Horizontal" Grid.Column="1" Grid.Row ="2">
+            <CheckBox  Content="Посмотреть пароль"  FontSize="15"  FontFamily="Times New Roman" Height="20" Background="#8C8C8C" />
+        </StackPanel>
+
+
+        <Button Command="{Binding Logingo}" BorderThickness="0" FontFamily="Times New Roman" VerticalAlignment="Bottom" Content="Войти" Foreground="#6EA7B5" Background="#242527" FontSize="20" Grid.Column="1" Grid.Row ="3"  Width="170" Height="40">
                 <Button.Template>
                     <ControlTemplate TargetType="Button">
                         <Border 
@@ -44,14 +47,14 @@
                     </ControlTemplate>
                 </Button.Template>
             </Button>
-            <Button Command="{Binding Registration}" IsEnabled="{Binding CanRegister}"  BorderThickness="0" Foreground="#2027BC" FontSize="20" Grid.Column="1" Grid.Row ="4" Width="200" Height="40" Background="White" VerticalAlignment="Center">
+        <Button Command="{Binding Registration}" FontFamily="Times New Roman" IsEnabled="{Binding CanRegister}"  BorderBrush="Transparent" BorderThickness="0" Foreground="#6AA7B6" FontSize="20" Grid.Column="1" Grid.Row ="4" Width="200" Height="40" Background="#F5F5F5" VerticalAlignment="Center">
                 <TextBlock>
         <Underline>
-            Регистрироваться
+            Зарегистрироваться
         </Underline>
                 </TextBlock>
             </Button>
 
         </Grid>
-    </Border>
+  
 </Window>

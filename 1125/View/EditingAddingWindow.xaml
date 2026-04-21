@@ -5,11 +5,12 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         mc:Ignorable="d"
         Title="Редактирование товара" 
-        Height="600" 
+        Height="650" 
         Width="800"
+        Background="#F5F5F5" 
         WindowStartupLocation="CenterScreen">
 
-    <Border BorderBrush="#2027BC" BorderThickness="15">
+   
         <Grid Margin="5">
             <Grid.RowDefinitions>
                 <RowDefinition Height="Auto"/>
@@ -20,7 +21,7 @@
        
             <TextBlock Text="Редактирование товара" 
                        FontSize="22"
-                       Foreground="#2027BC"
+                       Foreground="#FF6100"
                        HorizontalAlignment="Center"
                        Margin="0,10"/>
 
@@ -32,18 +33,20 @@
                         <ColumnDefinition Width="*"/>
                     </Grid.ColumnDefinitions>
 
-                    <StackPanel Grid.Column="0" Margin="0,0,20,0">
+                <StackPanel Grid.Column="0" Margin="0,0,20,0"  >
                         <Image Source="{Binding Product.ImageBitmap}"
                                Height="150" 
                                Width="150"
                                Stretch="UniformToFill"/>
 
                         <Button Command="{Binding UploadImageCommand}"
-                                Content="Изменить фото"
+                                Content="Изменить фото 1"
+                                FontFamily="Times New Roman"
                                 Margin="0,10"
                                 Width="150"
+                                Height ="20"
                                 Padding="5"
-                                Background="#FF2027BC"
+                                Background="#FF6100"
                                 Foreground="White"
                                 FontSize="14">
                             <Button.Template>
@@ -55,19 +58,78 @@
                                 </ControlTemplate>
                             </Button.Template>
                         </Button>
-                    </StackPanel>
+                    <Button Command="{Binding UploadImageCommand}"
+        Content="Изменить фото 2"
+        Margin="0,10"
+                            FontFamily="Times New Roman"
+        Width="150"
+        Height ="20"
+        Padding="5"
+        Background="#FF6100"
+        Foreground="White"
+        FontSize="14">
+                        <Button.Template>
+                            <ControlTemplate TargetType="Button">
+                                <Border CornerRadius="10"
+                    Background="{TemplateBinding Background}">
+                                    <ContentPresenter HorizontalAlignment="Center"/>
+                                </Border>
+                            </ControlTemplate>
+                        </Button.Template>
+                    </Button>
+                    <Button Command="{Binding UploadImageCommand}"
+Content="Изменить фото 3"
+Margin="0,10"
+Width="150"
+Height ="20"
+                            FontFamily="Times New Roman"
+Padding="5"
+Background="#FF6100"
+Foreground="White"
+FontSize="14">
+                        <Button.Template>
+                            <ControlTemplate TargetType="Button">
+                                <Border CornerRadius="10"
+            Background="{TemplateBinding Background}">
+                                    <ContentPresenter HorizontalAlignment="Center"/>
+                                </Border>
+                            </ControlTemplate>
+                        </Button.Template>
+                    </Button>
+                    <Button Command="{Binding UploadImageCommand}"
+Content="Изменить фото 4"
+Margin="0,10"
+Width="150"
+Height ="20"
+                            FontFamily="Times New Roman"
+Padding="5"
+Background="#FF6100"
+Foreground="White"
+FontSize="14">
+                        <Button.Template>
+                            <ControlTemplate TargetType="Button">
+                                <Border CornerRadius="10"
+            Background="{TemplateBinding Background}">
+                                    <ContentPresenter HorizontalAlignment="Center"/>
+                                </Border>
+                            </ControlTemplate>
+                        </Button.Template>
+                    </Button>
+                </StackPanel>
+                    
+                    
 
                     <StackPanel Grid.Column="1">
-                       
-                        <Label Content="Название:" Foreground="#2027BC" FontSize="16"/>
+
+                    <Label Content="Название:" Foreground="#242527" FontSize="16" FontFamily="Times New Roman"/>
                         <TextBox Text="{Binding Product.Name, Mode=TwoWay}" FontSize="14" Margin="0,0,0,10"/>
 
-                      
-                        <Label Content="Цена:" Foreground="#2027BC" FontSize="16"/>
+
+                    <Label Content="Цена:" Foreground="#242527" FontSize="16" FontFamily="Times New Roman"/>
                         <TextBox Text="{Binding Product.Price, Mode=TwoWay}" FontSize="14" Margin="0,0,0,10"/>
 
-               
-                        <Label Content="Описание:" Foreground="#2027BC" FontSize="16"/>
+
+                    <Label Content="Описание:" Foreground="#242527" FontSize="16" FontFamily="Times New Roman"/>
                         <TextBox Text="{Binding Product.Description, Mode=TwoWay}" 
                                  FontSize="14"
                                  Margin="0,0,0,10"
@@ -75,12 +137,19 @@
                                  TextWrapping="Wrap"
                                  AcceptsReturn="True"/>
 
-                     
-                        <Label Content="Остаток:" Foreground="#2027BC" FontSize="16"/>
+                    <Label Content="Характеристики:" FontFamily="Times New Roman" Foreground="#242527" FontSize="16"/>
+                    <TextBox Text="{}" 
+             FontSize="14"
+             Margin="0,0,0,10"
+             Height="60"
+             TextWrapping="Wrap"
+             AcceptsReturn="True"/>
+
+                    <Label Content="Остаток:" Foreground="#242527" FontSize="16" FontFamily="Times New Roman"/>
                         <TextBox Text="{Binding Product.Availability, Mode=TwoWay}" FontSize="14" Margin="0,0,0,10"/>
 
-                     
-                        <Label Content="Категория:" Foreground="#2027BC" FontSize="16"/>
+
+                    <Label Content="Категория:" Foreground="#242527" FontSize="16" FontFamily="Times New Roman"/>
                         <ComboBox ItemsSource="{Binding Categories}"
           SelectedItem="{Binding SelectedCategory, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
           DisplayMemberPath="Name" />
@@ -95,10 +164,11 @@
             <StackPanel Grid.Row="2" Orientation="Horizontal" HorizontalAlignment="Right" Margin="10">
                 <Button Command="{Binding SaveCommand}" 
             Content="Сохранить"
+                        FontFamily="Times New Roman"
             Width="120"
             Height="35"
             Margin="5"
-            Background="#FF2027BC"
+            Background="#FF6100"
             Foreground="White"
             FontSize="16"
             HorizontalContentAlignment="Center"
@@ -116,10 +186,11 @@
 
                 <Button Command="{Binding CloseCommand}"
             Content="Отмена"
+                        FontFamily="Times New Roman"
             Width="120"
             Height="35"
             Margin="5"
-            Background="#FFA0A0A0"
+            Background="#6EA7B5"
             Foreground="White"
             FontSize="16"
             HorizontalContentAlignment="Center"
@@ -137,10 +208,11 @@
 
                 <Button Command="{Binding DeleteCommand}" 
             Content="Удалить товар"
+                        FontFamily="Times New Roman"
             Width="120"
             Height="35"
             Margin="5"
-            Background="Red"
+            Background="#242527"
             Foreground="White"
             FontSize="16"
             HorizontalContentAlignment="Center"
@@ -158,5 +230,5 @@
             </StackPanel>
 
         </Grid>
-    </Border>
+ 
 </Window>

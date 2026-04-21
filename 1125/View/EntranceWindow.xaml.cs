@@ -27,5 +27,7 @@ namespace _1125.View
             DataContext = new EntranceVM(canRegister);
             
         }
+
+        
     }
 }

@@ -16,7 +16,7 @@
 
           
             <ScrollViewer Grid.Row="0" VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Disabled">
-                <ListBox ItemsSource="{Binding CartItems}" 
+            <ListBox Background="#F5F5F5"  ItemsSource="{Binding CartItems}" 
          ScrollViewer.HorizontalScrollBarVisibility="Disabled"
          HorizontalContentAlignment="Stretch" 
          BorderThickness="0"
@@ -67,7 +67,7 @@
                                     CommandParameter="{Binding}" />
                                         </StackPanel>
 
-                                        <Button FontSize="15" Height="35" Background="#FF2027BC" Foreground="White" Content="Удалить"
+                                    <Button FontSize="15" Height="35" Background="#6EA7B5" Foreground="White" Content="Удалить"
                                 Command="{Binding DataContext.RemoveCommand, RelativeSource={RelativeSource AncestorType=ListBox}}"
                                 CommandParameter="{Binding}">
                                             <Button.Template>
@@ -104,13 +104,13 @@
                     </Grid.RowDefinitions>
 
                 <StackPanel Grid.Column="0"  Orientation="Horizontal" VerticalAlignment="Top" Height="36">
-                    <Label Content="Общая сумма:" FontSize="20" Foreground="#FF6100" VerticalAlignment="Center"/>
+                    <Label Content="Общая сумма:" FontSize="20" Foreground="#FF6100" VerticalAlignment="Center" FontFamily="Times New Roman"/>
                     <TextBlock FontSize="20" FontWeight="Bold" Foreground="#FF6100" Text="{Binding TotalPrice}" VerticalAlignment="Center" Margin="5,0"/>
-                    <Label Content="руб." FontSize="20" Foreground="#FF6100" VerticalAlignment="Center"/>
+                    <Label Content="руб." FontSize="20" Foreground="#FF6100" VerticalAlignment="Center" FontFamily="Times New Roman"/>
                     </StackPanel>
 
                 <StackPanel Grid.Column="0"  Orientation="Vertical" VerticalAlignment="Stretch" Height="150" >
-                    <Label Content="Данные карты:" FontSize="20" Foreground="#000000" VerticalAlignment="Center" />
+                    <Label Content="Данные карты:" FontFamily="Times New Roman" FontSize="20" Foreground="#000000" VerticalAlignment="Center" />
                     <TextBox   Margin="0,0,0,8" Width="350" HorizontalAlignment="Left"/>
                     <StackPanel Grid.Column="0"  Orientation="Horizontal" HorizontalAlignment="Left"  Width="400" Height="25" >
                         <TextBox Text="" Margin="0,0,20,7" Width="265" HorizontalAlignment="Left"/>
@@ -123,20 +123,20 @@
 
 
                         <StackPanel Grid.Row="0" Grid.Column="1" Orientation="Vertical" HorizontalAlignment="Right" Margin="0,19,0,0" Width="327">
-                        <Label Content="Телефон:" Foreground="Black"/>
+                    <Label Content="Телефон:" Foreground="Black" FontFamily="Times New Roman"/>
                     <TextBox HorizontalAlignment="Left" Text="{Binding Tel, UpdateSourceTrigger=PropertyChanged}" Width="200" Margin="0,0,0,5"/>
-                        <Label Content="Адрес доставки:" Foreground="Black"/>
+                    <Label Content="Адрес доставки:" Foreground="Black" FontFamily="Times New Roman"/>
                     <TextBox HorizontalAlignment="Left" Text="{Binding Address, UpdateSourceTrigger=PropertyChanged}" Width="200"/>
-                        <Label Content="Фамилия:" Foreground="Black"/>
+                    <Label Content="Фамилия:" Foreground="Black" FontFamily="Times New Roman"/>
                     <TextBox HorizontalAlignment="Left"  Width="200"/>
-                        <Label Content="Имя:" Foreground="Black"/>
+                    <Label Content="Имя:" Foreground="Black" FontFamily="Times New Roman"/>
                     <TextBox HorizontalAlignment="Left"  Width="200"/>
-                        <Label Content="Очество:" Foreground="Black"/>
+                    <Label Content="Очество:" Foreground="Black" FontFamily="Times New Roman"/>
                     <TextBox HorizontalAlignment="Left"  Width="200"/>
                 </StackPanel>
 
                 <StackPanel Grid.Column="1" Grid.Row="1" Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Bottom" Height="40" Margin="4,10,0,0" Width="315">
-                    <Button Command="{Binding Back2}" BorderThickness="0" VerticalAlignment="Bottom" Content="Назад" Foreground="White" Background="#242527" FontSize="20" Width="130" Height="40" Margin="0 0 15 0">
+                    <Button FontFamily="Times New Roman" Command="{Binding Back2}" BorderThickness="0" VerticalAlignment="Bottom" Content="Назад" Foreground="White" Background="#242527" FontSize="20" Width="130" Height="40" Margin="0 0 15 0">
                         <Button.Template>
                             <ControlTemplate TargetType="Button">
                                 <Border 
@@ -150,7 +150,7 @@
                         </Button.Template>
                     </Button>
 
-                    <Button Command="{Binding Order}" BorderThickness="0" VerticalAlignment="Bottom" Content="Оформить заказ" Foreground="White" Background="#FF6100" FontSize="20" Width="170" Height="40" Click="Button_Click">
+                    <Button FontFamily="Times New Roman" Command="{Binding Order}" BorderThickness="0" VerticalAlignment="Bottom" Content="Оформить заказ" Foreground="White" Background="#FF6100" FontSize="20" Width="170" Height="40" Click="Button_Click">
                         <Button.Template>
                             <ControlTemplate TargetType="Button">
                                 <Border 

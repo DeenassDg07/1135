@@ -51,24 +51,25 @@
 		</Style>
 	</Window.Resources>
 	<Window.Background>
-		<ImageBrush ImageSource="Image/5247164926118720603.jpg"/>
+        <ImageBrush ImageSource="Image/Снимок экрана 2026-04-21 224337.png"/>
 	</Window.Background>
 	<Grid HorizontalAlignment="Stretch" Height="NaN" Margin="0,0,0,0" VerticalAlignment="Stretch" Width="NaN">
 		<Grid.Background>
-			<ImageBrush ImageSource="Image/5247164926118720603.jpg"/>
+            <ImageBrush ImageSource="Image/Снимок экрана 2026-04-21 224337.png"/>
 		</Grid.Background>
 		<Grid.RowDefinitions>
-			<RowDefinition/>
-			<RowDefinition/>
+            <RowDefinition Height="250"/>
+            <RowDefinition/>
 		</Grid.RowDefinitions>
 		<StackPanel HorizontalAlignment="Center" VerticalAlignment="Top" Grid.Row ="1">
 			<StackPanel.Background>
 				<ImageBrush/>
 			</StackPanel.Background>
-            <Button Content="Гость" Style="{StaticResource RoundedButton}" Command="{Binding Category}" VerticalAlignment="Center" HorizontalAlignment="Center" Height="35" Width="140" Margin="0,0,0,5"/>
-            <Button Content="Пользователь" Style="{StaticResource RoundedButton}" Command="{Binding OpenLogin}" VerticalAlignment="Center" HorizontalAlignment="Center" Height="35" Width="140" Margin="0,0,0,5"/>
-            <Button Content="Директор" Style="{StaticResource RoundedButton}" Command="{Binding OpenLoginDirector}" CommandParameter="noreg" VerticalAlignment="Center" HorizontalAlignment="Center" Height="35" Width="140"/>
+            <Button Content="ПОСМОТРЕТЬ" Style="{StaticResource RoundedButton}" Command="{Binding Category}" VerticalAlignment="Center" HorizontalAlignment="Center" Height="35" Width="140" Margin="0,0,0,5" Foreground="#6EA7B5" Background="#242527" />
+            <Button Content="ВОЙТИ" Style="{StaticResource RoundedButton}" Command="{Binding OpenLogin}" VerticalAlignment="Center" HorizontalAlignment="Center"  Height="37" Width="145" Margin="0,0,0,5" Foreground="#6EA7B5" Background="#242527"/>
 		</StackPanel>
+        <Button Grid.Row ="1" Height="35" Width="155" Content="Отзывы" Foreground="#6EA7B5" Background="#242527" FontSize="20"  VerticalAlignment="Bottom" HorizontalAlignment="Right" />
 
-	</Grid>
+
+    </Grid>
 </Window>
