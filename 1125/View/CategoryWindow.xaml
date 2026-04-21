@@ -5,43 +5,47 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:_1125.View"
         mc:Ignorable="d"
+          Background="#F5F5F5" 
         Title="CategoryWindow" Height="420" Width="250">
-    <Border BorderBrush="#2027BC" BorderThickness="15">
+    
         <Grid>
             <Grid.RowDefinitions>
-                <RowDefinition/>
-                <RowDefinition/>
-                <RowDefinition/>
-                <RowDefinition/>
-                <RowDefinition/>
-                <RowDefinition/>
-           
-            </Grid.RowDefinitions>
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition/>
-            </Grid.ColumnDefinitions>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="40"/>
+        </Grid.RowDefinitions>
+            
+        <TextBlock Height="25" Width="200"  Background="White" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,10,0,0" />
 
-           
-            <Button Command="{Binding ProductsVacuumСleaner}" Grid.Row="0" Height="30" Width="200" FontSize="20" Foreground="#2027BC" Background="White" BorderThickness="0">
-                <TextBlock><Underline>Пылесос</Underline></TextBlock>
-            </Button>
-            <Button Command="{Binding ProductsMicrowave}" Grid.Row="1" Height="30" Width="200" FontSize="20" Foreground="#2027BC" Background="White" BorderThickness="0">
-                <TextBlock><Underline>Микроволновка</Underline></TextBlock>
-            </Button>
-            <Button Command="{Binding ProductsFridge}" Grid.Row="2" Height="30" Width="200" FontSize="20" Foreground="#2027BC" Background="White" BorderThickness="0">
-                <TextBlock><Underline>Холодильник</Underline></TextBlock>
-            </Button>
-            <Button Command="{Binding ProductsTV}" Grid.Row="3" Height="30" Width="200" FontSize="20" Foreground="#2027BC" Background="White" BorderThickness="0">
-                <TextBlock><Underline>Телевизор</Underline></TextBlock>
-            </Button>
-            <Button Command="{Binding ProductsTelephone}" Grid.Row="4" Height="30" Width="200" FontSize="20" Foreground="#2027BC" Background="White" BorderThickness="0">
-                <TextBlock><Underline>Телефон</Underline></TextBlock>
-            </Button>
+        <ScrollViewer Grid.Row="1" VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Disabled">
+            <ListBox Background="#F5F5F5">
+                <ListBox.ItemTemplate>
+                    <DataTemplate>
+                        <Grid>
+                            <Button  Height="25" Width="200"  Background="#F5F5F5" BorderBrush="Transparent"/>
+                        </Grid>
+                    </DataTemplate>
+                </ListBox.ItemTemplate>
+            </ListBox>
+        </ScrollViewer>
 
-           
-            <Button Command="{Binding ProductsAll}" Grid.Row="5" Height="30" Width="200" FontSize="20" Foreground="White" Background="#2027BC" BorderThickness="0">
-                <TextBlock><Underline>Все товары</Underline></TextBlock>
-            </Button>
+        <Button Command="{Binding ProductsAll}" Grid.Row="2" Height="35" Width="200" FontSize="20" Foreground="#000000" Background="#FF6100" BorderThickness="0">
+            <TextBlock>Все товары</TextBlock>
+            <Button.Template>
+                <ControlTemplate TargetType="Button">
+                    <Border 
+    Background="{TemplateBinding Background}"
+    BorderBrush="{TemplateBinding BorderBrush}"
+    BorderThickness="{TemplateBinding BorderThickness}"
+    CornerRadius="20">
+                        <ContentPresenter 
+        HorizontalAlignment="Center" 
+        VerticalAlignment="Center"/>
+                    </Border>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
+      
         </Grid>
-    </Border>
+
 </Window>

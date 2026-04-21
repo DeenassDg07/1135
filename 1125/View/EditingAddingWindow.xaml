@@ -105,7 +105,7 @@
             VerticalContentAlignment="Center">
                     <Button.Template>
                         <ControlTemplate TargetType="Button">
-                            <Border CornerRadius="8" Background="{TemplateBinding Background}">
+                            <Border CornerRadius="20" Background="{TemplateBinding Background}">
                                 <ContentPresenter 
                         HorizontalAlignment="Center"
                         VerticalAlignment="Center" />
@@ -126,7 +126,7 @@
             VerticalContentAlignment="Center">
                     <Button.Template>
                         <ControlTemplate TargetType="Button">
-                            <Border CornerRadius="8" Background="{TemplateBinding Background}">
+                            <Border CornerRadius="20" Background="{TemplateBinding Background}">
                                 <ContentPresenter 
                         HorizontalAlignment="Center"
                         VerticalAlignment="Center" />
@@ -147,7 +147,7 @@
             VerticalContentAlignment="Center">
                     <Button.Template>
                         <ControlTemplate TargetType="Button">
-                            <Border CornerRadius="8" Background="{TemplateBinding Background}">
+                            <Border CornerRadius="20" Background="{TemplateBinding Background}">
                                 <ContentPresenter 
                         HorizontalAlignment="Center"
                         VerticalAlignment="Center" />
