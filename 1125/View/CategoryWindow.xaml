@@ -29,7 +29,7 @@
             </ListBox>
         </ScrollViewer>
 
-        <Button Command="{Binding ProductsAll}" Grid.Row="2" Height="35" Width="200" FontSize="20" Foreground="#000000" Background="#FF6100" BorderThickness="0" FontFamily="Times New Roman">
+        <Button Command="{Binding ProductsAll}" Grid.Row="2" Height="35" Width="180" FontSize="20" Foreground="#000000" Background="#FF6100" BorderThickness="0" FontFamily="Times New Roman">
             <TextBlock>Все товары</TextBlock>
             <Button.Template>
                 <ControlTemplate TargetType="Button">
