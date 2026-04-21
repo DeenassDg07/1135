@@ -13,5 +13,10 @@ namespace _1125.View
             vm.SetClose(() => this.Close());  // чтобы команда Back2 могла закрыть окно
             this.DataContext = vm;
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

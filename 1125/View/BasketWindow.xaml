@@ -5,12 +5,13 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:_1125.View"
         mc:Ignorable="d"
-        Title="BasketWindow" Height="550" Width="800" MinWidth="600" MinHeight="400">
-    <Border BorderBrush="#2027BC" BorderThickness="15">
+        Background="#F5F5F5" 
+        Title="BasketWindow" Height="650" Width="800" MinWidth="600" MinHeight="400">
+   
         <Grid Margin="10">
             <Grid.RowDefinitions>
                 <RowDefinition Height="*"/>
-                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
             </Grid.RowDefinitions>
 
           
@@ -102,52 +103,70 @@
                         <RowDefinition Height="Auto"/>
                     </Grid.RowDefinitions>
 
-                    <StackPanel Grid.Column="0" Orientation="Horizontal" VerticalAlignment="Center" Height="36">
-                        <Label Content="Общая сумма:" FontSize="20" Foreground="#2027BC" VerticalAlignment="Center"/>
-                        <TextBlock FontSize="20" FontWeight="Bold" Foreground="#2027BC" Text="{Binding TotalPrice}" VerticalAlignment="Center" Margin="5,0"/>
-                        <Label Content="руб." FontSize="20" Foreground="#2027BC" VerticalAlignment="Center"/>
+                <StackPanel Grid.Column="0"  Orientation="Horizontal" VerticalAlignment="Top" Height="36">
+                    <Label Content="Общая сумма:" FontSize="20" Foreground="#FF6100" VerticalAlignment="Center"/>
+                    <TextBlock FontSize="20" FontWeight="Bold" Foreground="#FF6100" Text="{Binding TotalPrice}" VerticalAlignment="Center" Margin="5,0"/>
+                    <Label Content="руб." FontSize="20" Foreground="#FF6100" VerticalAlignment="Center"/>
                     </StackPanel>
 
-                    <StackPanel Grid.Column="1" Orientation="Horizontal" HorizontalAlignment="Left" VerticalAlignment="Center" Height="40" Margin="4,0,0,0" Width="315">
-                        <Button Command="{Binding Back2}" BorderThickness="0" VerticalAlignment="Bottom" Content="Назад" Foreground="White" Background="#FF2027BC" FontSize="20" Width="130" Height="40" Margin="0 0 15 0">
-                            <Button.Template>
-                                <ControlTemplate TargetType="Button">
-                                    <Border 
-                        Background="{TemplateBinding Background}"
-                        BorderBrush="{TemplateBinding BorderBrush}"
-                        BorderThickness="{TemplateBinding BorderThickness}"
-                        CornerRadius="20">
-                                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
-                                    </Border>
-                                </ControlTemplate>
-                            </Button.Template>
-                        </Button>
+                <StackPanel Grid.Column="0"  Orientation="Vertical" VerticalAlignment="Stretch" Height="100">
+                    <Label Content="Данные карты:" FontSize="20" Foreground="#000000" VerticalAlignment="Center"/>
+                    <TextBox/>
+                    <TextBox/>
+                    <TextBox/>
+                    <TextBox/>
+                </StackPanel>
 
-                        <Button Command="{Binding Order}" BorderThickness="0" VerticalAlignment="Bottom" Content="Оформить заказ" Foreground="White" Background="#FF2027BC" FontSize="20" Width="170" Height="40">
-                            <Button.Template>
-                                <ControlTemplate TargetType="Button">
-                                    <Border 
-                        Background="{TemplateBinding Background}"
-                        BorderBrush="{TemplateBinding BorderBrush}"
-                        BorderThickness="{TemplateBinding BorderThickness}"
-                        CornerRadius="20">
-                                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
-                                    </Border>
-                                </ControlTemplate>
-                            </Button.Template>
-                        </Button>
-                    </StackPanel>
 
-                    <StackPanel Grid.Row="1" Grid.Column="1" Orientation="Vertical" HorizontalAlignment="Right" Margin="0,19,0,0" Width="327">
+
+
+                        <StackPanel Grid.Row="0" Grid.Column="1" Orientation="Vertical" HorizontalAlignment="Right" Margin="0,19,0,0" Width="327">
                         <Label Content="Телефон:" Foreground="Black"/>
-                        <TextBox Text="{Binding Tel, UpdateSourceTrigger=PropertyChanged}" Width="200" Margin="0,0,0,5"/>
+                    <TextBox HorizontalAlignment="Left" Text="{Binding Tel, UpdateSourceTrigger=PropertyChanged}" Width="200" Margin="0,0,0,5"/>
                         <Label Content="Адрес доставки:" Foreground="Black"/>
-                        <TextBox Text="{Binding Address, UpdateSourceTrigger=PropertyChanged}" Width="200"/>
-                    </StackPanel>
-                </Grid>
+                    <TextBox HorizontalAlignment="Left" Text="{Binding Address, UpdateSourceTrigger=PropertyChanged}" Width="200"/>
+                        <Label Content="Фамилия:" Foreground="Black"/>
+                    <TextBox HorizontalAlignment="Left"  Width="200"/>
+                        <Label Content="Имя:" Foreground="Black"/>
+                    <TextBox HorizontalAlignment="Left"  Width="200"/>
+                        <Label Content="Очество:" Foreground="Black"/>
+                    <TextBox HorizontalAlignment="Left"  Width="200"/>
+                </StackPanel>
+
+                <StackPanel Grid.Column="1" Grid.Row="1" Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Bottom" Height="40" Margin="4,5,0,0" Width="315">
+                    <Button Command="{Binding Back2}" BorderThickness="0" VerticalAlignment="Bottom" Content="Назад" Foreground="White" Background="#242527" FontSize="20" Width="130" Height="40" Margin="0 0 15 0">
+                        <Button.Template>
+                            <ControlTemplate TargetType="Button">
+                                <Border 
+     Background="{TemplateBinding Background}"
+     BorderBrush="{TemplateBinding BorderBrush}"
+     BorderThickness="{TemplateBinding BorderThickness}"
+     CornerRadius="20">
+                                    <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                </Border>
+                            </ControlTemplate>
+                        </Button.Template>
+                    </Button>
+
+                    <Button Command="{Binding Order}" BorderThickness="0" VerticalAlignment="Bottom" Content="Оформить заказ" Foreground="White" Background="#FF6100" FontSize="20" Width="170" Height="40" Click="Button_Click">
+                        <Button.Template>
+                            <ControlTemplate TargetType="Button">
+                                <Border 
+     Background="{TemplateBinding Background}"
+     BorderBrush="{TemplateBinding BorderBrush}"
+     BorderThickness="{TemplateBinding BorderThickness}"
+     CornerRadius="20">
+                                    <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                </Border>
+                            </ControlTemplate>
+                        </Button.Template>
+                    </Button>
+                </StackPanel>
+
+            </Grid>
 
 
             </Grid>
         </Grid>
-    </Border>
+   
 </Window>
