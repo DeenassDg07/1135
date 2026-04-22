@@ -19,7 +19,7 @@
 			<Setter Property="Height" Value="42"/>
 			<Setter Property="Background" Value="White"/>
 			<Setter Property="Foreground" Value="Black"/>
-			<Setter Property="FontFamily" Value="Arial Black"/>
+			<Setter Property="FontFamily" Value="Arial"/>
 			<Setter Property="Template">
 				<Setter.Value>
 					<ControlTemplate TargetType="Button">
@@ -65,10 +65,11 @@
 			<StackPanel.Background>
 				<ImageBrush/>
 			</StackPanel.Background>
-            <Button Content="ПОСМОТРЕТЬ" Style="{StaticResource RoundedButton}" Command="{Binding Category}" VerticalAlignment="Center" HorizontalAlignment="Center" Height="35" Width="140" Margin="0,0,0,5" Foreground="#6EA7B5" Background="#242527" />
-            <Button Content="ВОЙТИ" Style="{StaticResource RoundedButton}" Command="{Binding OpenLogin}" VerticalAlignment="Center" HorizontalAlignment="Center"  Height="37" Width="145" Margin="0,0,0,5" Foreground="#6EA7B5" Background="#242527"/>
+            <Button Content="Посмотреть" Style="{StaticResource RoundedButton}" Command="{Binding Category}" VerticalAlignment="Center" HorizontalAlignment="Center" Height="35" Width="140" Margin="0,0,0,5" Foreground="#6EA7B5" Background="#242527" />
+            <Button Content="Войти" Style="{StaticResource RoundedButton}" Command="{Binding OpenLogin}" VerticalAlignment="Center" HorizontalAlignment="Center"  Height="35" Width="140" Margin="0,0,0,5" Foreground="#6EA7B5" Background="#242527"/>
+            <Button Content="Отзывы" Style="{StaticResource RoundedButton}"  Height="35" Width="140"  Foreground="#6EA7B5" Background="#242527" FontSize="20" Margin="0,0,0,5"  VerticalAlignment="Center" HorizontalAlignment="Center" />
 		</StackPanel>
-        <Button Grid.Row ="1" Height="35" Width="155" Content="Отзывы" Foreground="#6EA7B5" Background="#242527" FontSize="20"  VerticalAlignment="Bottom" HorizontalAlignment="Right" />
+        
 
 
     </Grid>

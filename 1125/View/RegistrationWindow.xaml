@@ -41,8 +41,8 @@
                 <CheckBox  Content="Посмотреть пароль"  FontSize="15"  FontFamily="Times New Roman" Height="20" Background="#8C8C8C" />
             </StackPanel>
 
-       
-        <Button  BorderThickness="0" Command="{Binding Logingood}"  Content="Войти"  FontSize="20"  Grid.Column="1" Grid.Row ="4" Foreground="#6EA7B5" Background="#242527" Width="170" Height="40" VerticalAlignment="Center" >
+
+        <Button  BorderThickness="0" Command="{Binding Logingood}" FontFamily="Times New Roman"  Content="Войти"  FontSize="20"  Grid.Column="1" Grid.Row ="4" Foreground="#6EA7B5" Background="#242527" Width="170" Height="40" VerticalAlignment="Center" >
                 <Button.Template>
                     <ControlTemplate TargetType="Button">
                         <Border 
