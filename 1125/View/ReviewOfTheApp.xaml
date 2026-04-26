@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:_1125.View"
         mc:Ignorable="d"
          Background="#F5F5F5" 
-        Title="ReviewOfTheApp" Height="450" Width="800">
+        Title="ReviewOfTheApp" Height="390" Width="800">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="250"/>
@@ -15,11 +15,11 @@
 
         <Grid.RowDefinitions>
             <RowDefinition Height="50"/>
-            <RowDefinition/>
+            <RowDefinition Height="62"/>
             <RowDefinition Height="120"/>
             <RowDefinition Height="30"/>
             <RowDefinition Height="30"/>
-            <RowDefinition Height="80"/>
+            <RowDefinition Height="70"/>
         </Grid.RowDefinitions>
 
         <Button Command="{Binding UploadImageCommand}" Grid.Column="0" Grid.Row="2" 
