@@ -9,10 +9,10 @@ internal class DBConnection
     public void Config()
     {
         MySqlConnectionStringBuilder sb = new MySqlConnectionStringBuilder();
-        sb.UserID = "student";
-        sb.Password = "student";
-        sb.Server = "95.154.107.102";
-        sb.Database = "1125Astrakov";
+        sb.UserID = "roor";
+        sb.Password = "228358";
+        sb.Server = "127.0.0.1";
+        sb.Database = "1135";
         sb.CharacterSet = "utf8mb4";
         _connection = new MySqlConnection(sb.ToString());
     }
