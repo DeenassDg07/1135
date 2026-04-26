@@ -346,7 +346,7 @@ xmlns:cmd="http://www.galasoft.ch/mvvmlight"
 
         <StackPanel Orientation="Horizontal" Grid.Row="3"  Grid.Column="1"  >
 
-            <Button FontFamily="Times New Roman" Command="{Binding Ok}" Margin="0,0,15,10"
+            <Button FontFamily="Times New Roman"  Margin="0,0,15,10"
 BorderThickness="0" 
 Content="В корзину" 
 Grid.Row="1" Grid.Column="1" 

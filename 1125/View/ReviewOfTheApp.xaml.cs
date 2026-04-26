@@ -15,11 +15,11 @@ using System.Windows.Shapes;
 namespace _1125.View
 {
     /// <summary>
-    /// Логика взаимодействия для Window1.xaml
+    /// Логика взаимодействия для ReviewOfTheApp.xaml
     /// </summary>
-    public partial class Window1 : Window
+    public partial class ReviewOfTheApp : Window
     {
-        public Window1()
+        public ReviewOfTheApp()
         {
             InitializeComponent();
         }
